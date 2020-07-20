@@ -47,6 +47,8 @@
     timeout: 180
   delegate_to: localhost
 
+- include: add_server_to_known_hosts.yml
+
 # uses raw instead of module as python might not be installed yet
 - name: install python on remote host
   raw: apt-get install python -y
